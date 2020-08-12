@@ -16,4 +16,4 @@ RUN git clone https://github.com/nishanksisodiya/super-gt-bot /SuperGTBot
 #
 # Finalization
 #
-CMD ["python3" ,"translateTweet.py"]
+CMD ["python3" ,"bots/translateTweet.py"]
