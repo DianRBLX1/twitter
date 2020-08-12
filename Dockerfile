@@ -1,4 +1,6 @@
 FROM python:3.8-alpine
+RUN apk update
+RUN apk add git
 
 RUN mkdir /SuperGTBot && chmod 777 /SuperGTBot
 ENV PATH="/SuperGTBot/bin:$PATH"
