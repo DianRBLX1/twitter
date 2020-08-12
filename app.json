@@ -1,0 +1,41 @@
+{
+  "name": "F4H Super GT in German",
+  "description": "TG Translator bot F4H Super GT",
+  "repository": "https://github.com/nishanksisodiya/super-gt-bot",
+  "stack": "container",
+  "env": {
+    "CONSUMER_KEY": {
+      "description": "Get this value from developer.twitter.com.",
+      "required": true
+    },
+    "CONSUMER_SECRET": {
+      "description": "Get this value from developer.twitter.com.",
+      "required": true
+    },
+    "ACCESS_TOKEN": {
+      "description": "Get this value from developer.twitter.com.",
+      "required": true
+    },
+    "ACCESS_TOKEN_SECRET": {
+      "description": "Get this value from developer.twitter.com.",
+      "required": true
+    },
+    "HEROKU_API_KEY": {
+      "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
+      "value": ""
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Add the Heroku app name here. It helps with userbot updates.",
+      "required": true
+    },
+    "GITHUB_ACCESS_TOKEN": {
+      "description": "Your GITHUB_ACCESS_TOKEN, get it from 'https://github.com/settings/tokens'",
+      "value": "",
+      "required": false
+    },
+    "GIT_REPO_NAME": {
+      "description": "Add the GIT_REPO_NAME here. It helps with commit on GitHub.",
+      "required": false
+    }
+  }
+}
