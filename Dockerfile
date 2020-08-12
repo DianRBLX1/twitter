@@ -11,7 +11,7 @@ RUN git clone https://github.com/nishanksisodiya/super-gt-bot /SuperGTBot
 #
 # Copies session and config(if it exists)
 #
-COPY ./sample_config.env ./userbot.session* ./config.env* /One4uBot/
+#COPY ./sample_config.env ./userbot.session* ./config.env* /One4uBot/
 
 #
 # Finalization
