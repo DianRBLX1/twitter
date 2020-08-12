@@ -7,6 +7,7 @@ ENV PATH="/SuperGTBot/bin:$PATH"
 WORKDIR /SuperGTBot
 
 RUN git clone https://github.com/nishanksisodiya/super-gt-bot /SuperGTBot
+RUN pip install -r requirements.txt
 
 #
 # Copies session and config(if it exists)
