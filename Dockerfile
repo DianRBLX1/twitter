@@ -1,6 +1,7 @@
 FROM python:3.8-alpine
 RUN apk update
 RUN apk add git
+RUN apk add --update --no-cache g++ gcc libxslt-dev libxml2-dev
 
 RUN mkdir /SuperGTBot && chmod 777 /SuperGTBot
 ENV PATH="/SuperGTBot/bin:$PATH"
