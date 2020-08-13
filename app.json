@@ -23,10 +23,6 @@
     "TRANSLATE_TO": {
       "description": "Language u want the tweets to be translated to get lnaguage code from here https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes (USE ISO 639-1 CODES)",
       "required": true
-    },
-    "SINCE_ID": {
-      "description": "Last checked tweet (DO NOT EDIT)",
-      "value": "1"
     }
   }
 }
