@@ -3,11 +3,11 @@ RUN apk update
 RUN apk add git
 RUN apk add --update --no-cache g++ gcc libxslt-dev libxml2-dev
 
-RUN mkdir /SuperGTBot && chmod 777 /SuperGTBot
-ENV PATH="/SuperGTBot/bin:$PATH"
-WORKDIR /SuperGTBot
+RUN mkdir /Transtale-tweet-bot && chmod 777 /Transtale-tweet-bot
+ENV PATH="/Transtale-tweet-bot/bin:$PATH"
+WORKDIR /Transtale-tweet-bot
 
-RUN git clone https://github.com/nishanksisodiya/super-gt-bot /SuperGTBot
+RUN git clone https://github.com/nishanksisodiya/Transtale-tweet-bot /Transtale-tweet-bot
 RUN pip install -r requirements.txt
 
 #

@@ -1,4 +1,4 @@
-# super-gt-bot/bots/config.py
+# Transtale-tweet-bot/bots/config.py
 import tweepy
 import logging
 import os

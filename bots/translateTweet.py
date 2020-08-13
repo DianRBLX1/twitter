@@ -1,11 +1,12 @@
 #!/usr/bin/env python
-# super-gt-bot/bots/translateTweet.py
+# Transtale-tweet-bot/bots/translateTweet.py
 
 import tweepy
 import logging
 from config import create_api
 import six
 from translate import Translator
+import os
 import time
 
 translator= Translator(to_lang="German")
@@ -17,8 +18,7 @@ logger = logging.getLogger()
 def check_new_tweet(api, since_id):
     logger.info("Retrieving Tweets")
     new_since_id = since_id
-    # superGT id = 2967005386
-    for tweet in tweepy.Cursor(api.user_timeline, user_id=408575179, since_id=since_id, include_rts=False,
+    for tweet in tweepy.Cursor(api.user_timeline, user_id=int(os.getenv("STALK_ID")), since_id=since_id, include_rts=False,
                                exclude_replies=True).items(1):
         text = tweet.text
         logger.critical(text)
