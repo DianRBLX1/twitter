@@ -20,7 +20,7 @@ def check_new_tweet(api, since_id):
     new_since_id = since_id
     for tweet in tweepy.Cursor(api.user_timeline, user_id=int(os.getenv("STALK_ID")), since_id=since_id, include_rts=False,
                                exclude_replies=True, tweet_mode='extended').items(1):
-        text = tweet.text
+        text = tweet.full_text
         logger.info(text)
         if isinstance(text, six.binary_type):
             text = text.decode('utf-8')
