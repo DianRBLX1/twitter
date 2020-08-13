@@ -9,7 +9,7 @@ from translate import Translator
 import os
 import time
 
-translator= Translator(to_lang="German")
+translator = Translator(to_lang=os.getenv("TRANSLATE_TO").lower())
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
@@ -35,9 +35,9 @@ def check_new_tweet(api, since_id):
             except Exception as e:
                 logger.error("Error on fav", exc_info=True)
 
-        api.update_status(
-            status=f"{result}\nhttps://twitter.com/{tweet.user.screen_name}/status/{tweet.id}",
-        )
+            api.update_status(
+                status=f"{result}\nhttps://twitter.com/{tweet.user.screen_name}/status/{tweet.id}",
+            )
 
     logger.info('fetched')
     return new_since_id
@@ -48,7 +48,7 @@ def main():
     since_id = 1
     while True:
         since_id = check_new_tweet(api, since_id)
-        time.sleep(60)
+        time.sleep(300)
 
 
 if __name__ == "__main__":

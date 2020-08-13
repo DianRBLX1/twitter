@@ -20,9 +20,13 @@
       "description": "Get this value from developer.twitter.com.",
       "required": true
     },
-    "STALK_ID": {
-      "description": "Get this value from http://gettwitterid.com.",
+    "TRANSLATE_TO": {
+      "description": "Language u want the tweets to be translated to get lnaguage code from here https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes (USE ISO 639-1 CODES)",
       "required": true
+    },
+    "SINCE_ID": {
+      "description": "Lace checked tweet (DO NOT EDIT)",
+      "value": "1"
     }
   }
 }
