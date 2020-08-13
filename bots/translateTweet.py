@@ -21,12 +21,12 @@ def check_new_tweet(api, since_id):
     for tweet in tweepy.Cursor(api.user_timeline, user_id=int(os.getenv("STALK_ID")), since_id=since_id, include_rts=False,
                                exclude_replies=True).items(1):
         text = tweet.text
-        print(text)
+        logger.info(text)
         if isinstance(text, six.binary_type):
             text = text.decode('utf-8')
 
         result = translator.translate(text)
-        print(result)
+        logger.info(result)
         new_since_id = max(tweet.id, new_since_id)
         if not tweet.favorited:
             # Mark it as Liked, since we have not done it yet
