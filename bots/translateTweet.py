@@ -26,7 +26,7 @@ def check_new_tweet(api, since_id):
             text = text.decode('utf-8')
 
         result = translator.translate(text)
-
+        print(result)
         new_since_id = max(tweet.id, new_since_id)
         if not tweet.favorited:
             # Mark it as Liked, since we have not done it yet
@@ -52,8 +52,7 @@ def check_new_tweet(api, since_id):
                 )
             else:
                 api.update_status(
-                    status=orig_twe,
-                    in_reply_to_status_id=twe.id
+                    status=orig_twe
                 )
 
     logger.info('fetched')
