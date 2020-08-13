@@ -25,7 +25,7 @@
       "required": true
     },
     "SINCE_ID": {
-      "description": "Lace checked tweet (DO NOT EDIT)",
+      "description": "Last checked tweet (DO NOT EDIT)",
       "value": "1"
     }
   }
