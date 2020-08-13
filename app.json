@@ -1,7 +1,7 @@
 {
-  "name": "F4H Super GT in German",
-  "description": "TG Translator bot F4H Super GT",
-  "repository": "https://github.com/nishanksisodiya/super-gt-bot",
+  "name": "Translator Bot",
+  "description": "Translator bot Twitter is a useful too which can translate all Tweets(Excluding RTs and Replies) into any desired language",
+  "repository": "https://github.com/nishanksisodiya/translate-tweet-bot",
   "stack": "container",
   "env": {
     "CONSUMER_KEY": {
