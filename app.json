@@ -20,6 +20,10 @@
       "description": "Get this value from developer.twitter.com.",
       "required": true
     },
+    "STALK_ID": {
+      "description": "ID for the account whos tweets u want to translate (get it from http://gettwitterid.com)",
+      "required": true
+    },
     "TRANSLATE_TO": {
       "description": "Language u want the tweets to be translated to get lnaguage code from here https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes (USE ISO 639-1 CODES)",
       "required": true
