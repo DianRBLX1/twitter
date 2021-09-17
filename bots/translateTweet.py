@@ -5,7 +5,7 @@ import tweepy
 import logging
 from config import create_api
 import six
-from translate import Translator
+from doodle-translate import Translator
 import os
 import time
 
@@ -25,7 +25,7 @@ def check_new_tweet(api, since_id):
         if isinstance(text, six.binary_type):
             text = text.decode('utf-8')
 
-        result = translator.translate(text)
+        result = translator.doodle-translate(text)
         logger.info(result)
         new_since_id = max(tweet.id, new_since_id)
         if not tweet.favorited:
